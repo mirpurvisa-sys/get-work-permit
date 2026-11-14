@@ -1,0 +1,120 @@
+.wrap {
+  width: var(--container);
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.kicker {
+  color: var(--sea-green);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.head h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--prussian-blue);
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  height: 420px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.4s ease;
+}
+
+/* background images */
+.bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.bg0 {
+  background-image: url("https://images.unsplash.com/photo-1521791136064-7986c2920216");
+}
+
+.bg1 {
+  background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+}
+
+.bg2 {
+  background-image: url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c");
+}
+
+/* dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+/* content */
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  color: #fff;
+}
+
+.number {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  letter-spacing: 0.2em;
+}
+
+.content h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 16px;
+  font-weight: 700;
+  color: var(--sea-green);
+}
+
+/* hover effect */
+.card:hover .bg {
+  transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card {
+    height: 260px;
+  }
+}
+
+/* Reference theme: light surfaces, navy type, restrained borders. */
+.card {background:#fff;color:var(--text);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-soft);backdrop-filter:none;} .card h2,.card h3,.card strong {color:var(--prussian-blue);} .card p {color:var(--muted);}
+.kicker {color:var(--prussian-blue);text-transform:none;letter-spacing:.02em;}

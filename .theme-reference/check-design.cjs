@@ -1,0 +1,10 @@
+const fs=require('fs'),path=require('path'),ts=require('typescript'),postcss=require('postcss');
+const baseline=JSON.parse(fs.readFileSync('.theme-reference/baseline.json','utf8'));
+const active=['app/page.tsx','app/about/page.tsx','components/home/HomeHero.tsx','components/home/ServicesAxis/ServicesAxis.tsx','components/services/ServicesShowcase.tsx','components/countries/CountriesAtlas.tsx','components/contact/ContactPanel.tsx','components/work-permit/PermitGuide.tsx','components/how-it-works/HowTimeline.tsx','components/blog/BlogBoard.tsx','components/faq/FaqList.tsx'];
+let count=0;
+for(const f of active){const source=fs.readFileSync(f,'utf8');const imp=source.match(/import styles from ['"](.+?)['"]/);if(!imp)continue;const cssPath=path.resolve(path.dirname(f),imp[1]);const css=fs.readFileSync(cssPath,'utf8');postcss.parse(css,{from:cssPath});const used=[...source.matchAll(/styles\.([A-Za-z0-9_]+)/g)].map(m=>m[1]);const missing=[...new Set(used)].filter(k=>!css.match(new RegExp('\\.'+k+'(?![\\w-])')));if(missing.length)console.log('Undefined CSS:',f,missing.join(', '));count++;}
+function copyStrings(source){const strings=[];const sf=ts.createSourceFile('x.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);function walk(n){if(ts.isJsxText(n)||ts.isStringLiteral(n)){let text=n.text.replace(/\s+/g,' ').trim();if(text.length>45&&!text.startsWith('http')&&!text.includes('auto=format')&&!text.includes('styles.')&&!text.includes('svg')&&!text.includes('use client'))strings.push(text);}ts.forEachChild(n,walk);}walk(sf);return strings;}
+const combined=active.map(f=>fs.readFileSync(f,'utf8')).join('\n')+fs.readFileSync('components/ConsultationForm.tsx','utf8');
+let missingCopy=[];const norm=combined.replace(/\s+/g,' ');
+for(const f of active){const orig=baseline[f];if(!orig)continue;for(const text of copyStrings(orig))if(!norm.includes(text))missingCopy.push({file:f,text});}
+console.log('Parsed '+count+' redesigned modules. Copy review:',JSON.stringify(missingCopy,null,2));

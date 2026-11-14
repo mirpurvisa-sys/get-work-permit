@@ -1,0 +1,2 @@
+import styles from './LegalSheet.module.css';
+export function LegalSheet({sections}:{sections:Array<{title:string;text:string}>}){return <section className={styles.wrap}><aside className={styles.index}><nav aria-label="On this page">{sections.map((s,i)=><a href={`#section-${i}`} key={s.title}>{s.title}</a>)}</nav></aside><div className={styles.sheet}>{sections.map((s,i)=><section id={`section-${i}`} key={s.title}><h2>{s.title}</h2><p>{s.text}</p></section>)}</div></section>}

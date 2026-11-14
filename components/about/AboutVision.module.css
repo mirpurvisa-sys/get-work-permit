@@ -1,0 +1,86 @@
+.wrap {
+  padding: 0 0 88px;
+  background: #f8fafc;
+}
+
+.inner {
+  width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+}
+
+.vision,
+.mission {
+  min-width: 0;
+  padding: 34px;
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+.vision {
+  border-top: 5px solid var(--golden-pollen);
+}
+
+.mission {
+  border-top: 5px solid var(--prussian-blue);
+}
+
+.label {
+  margin-bottom: 14px;
+  color: var(--digital-blue);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.vision h2 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.vision p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.points {
+  display: grid;
+  gap: 14px;
+}
+
+.points div {
+  padding: 18px 18px 18px 20px;
+  background: rgba(11, 37, 69, 0.04);
+  border-left: 4px solid var(--sea-green);
+}
+
+.points strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 0.98rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.points p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+@media (max-width: 980px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Reference theme: light surfaces, navy type, restrained borders. */

@@ -1,0 +1,63 @@
+.wrap {
+  padding: 88px 0;
+  background: #f8fafc;
+}
+
+.inner {
+  width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.left {
+  min-width: 0;
+}
+
+.kicker {
+  margin-bottom: 12px;
+  color: var(--digital-blue);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.left h2 {
+  margin: 0;
+  max-width: 11ch;
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.right {
+  min-width: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.right p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.95;
+}
+
+@media (max-width: 980px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .left h2 {
+    max-width: 100%;
+  }
+}
+
+
+/* Reference theme: light surfaces, navy type, restrained borders. */
+.kicker {color:var(--prussian-blue);text-transform:none;letter-spacing:.02em;}

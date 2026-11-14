@@ -1,0 +1,108 @@
+.wrap {
+  background: linear-gradient(180deg, var(--prussian-blue) 0%, var(--ink) 100%);
+  padding: 84px 0;
+}
+
+.inner {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.head {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.kicker {
+  margin-bottom: 10px;
+  color: var(--golden-pollen);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.head h2 {
+  margin: 0 auto 14px;
+  max-width: 14ch;
+  color: white;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.04;
+}
+
+.head p {
+  margin: 0 auto;
+  max-width: 760px;
+  color: rgba(248, 250, 252, 0.84);
+  line-height: 1.8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  padding: 22px 20px 20px;
+  background: white;
+  box-shadow: var(--shadow-soft);
+}
+
+.bar {
+  width: 52px;
+  height: 6px;
+  margin-bottom: 18px;
+  background: linear-gradient(90deg, var(--golden-pollen), var(--sea-green));
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 1.06rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.94rem;
+}
+
+.actionWrap {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 24px;
+  background: linear-gradient(135deg, var(--digital-blue) 0%, var(--sea-green) 100%);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Reference theme: light surfaces, navy type, restrained borders. */
+.action {background:var(--prussian-blue);color:white;border-radius:6px;box-shadow:none;text-transform:none;letter-spacing:0;}
+.card {background:#fff;color:var(--text);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-soft);backdrop-filter:none;} .card h2,.card h3,.card strong {color:var(--prussian-blue);} .card p {color:var(--muted);}
+.kicker {color:var(--prussian-blue);text-transform:none;letter-spacing:.02em;}

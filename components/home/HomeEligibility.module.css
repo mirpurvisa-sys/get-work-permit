@@ -1,0 +1,177 @@
+.wrap {
+  background: linear-gradient(135deg, var(--prussian-blue) 0%, var(--prussian-blue) 62%, var(--ink) 100%);
+  padding: 86px 0;
+  overflow: hidden;
+}
+
+.inner {
+  width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(320px, 460px) minmax(0, 1fr);
+  gap: 38px;
+  align-items: center;
+}
+
+.formCard {
+  background: white;
+  padding: 28px;
+  box-shadow: var(--shadow-strong);
+}
+
+.kicker {
+  margin-bottom: 10px;
+  color: var(--golden-pollen);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.formCard h2 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.04;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  border: 1px solid rgba(11, 37, 69, 0.18);
+  background: #fbfdff;
+  color: var(--text);
+  padding: 14px 14px;
+  font: inherit;
+  outline: none;
+}
+
+.form textarea {
+  grid-column: 1 / -1;
+  min-height: 118px;
+  resize: vertical;
+}
+
+.actions {
+  margin-top: 14px;
+}
+
+.actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  background: linear-gradient(135deg, var(--digital-blue) 0%, var(--sea-green) 100%);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.content {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.plane {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  color: rgba(248, 250, 252, 0.08);
+  font-size: clamp(3rem, 12vw, 8rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-align: right;
+  max-width: 8ch;
+}
+
+.copy {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+}
+
+.copy span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--golden-pollen);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.copy h3 {
+  margin: 0 0 16px;
+  color: white;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.03;
+  max-width: 12ch;
+}
+
+.copy p {
+  margin: 0 0 20px;
+  color: rgba(248, 250, 252, 0.82);
+  line-height: 1.85;
+}
+
+.points {
+  display: grid;
+  gap: 14px;
+}
+
+.points article {
+  padding: 18px 20px;
+  background: rgba(248, 250, 252, 0.08);
+  border-left: 4px solid var(--sea-green);
+  backdrop-filter: blur(8px);
+}
+
+.points strong {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.88rem;
+}
+
+.points p {
+  margin: 0;
+  color: rgba(248, 250, 252, 0.75);
+}
+
+@media (max-width: 1080px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Reference theme: light surfaces, navy type, restrained borders. */
+.formCard {background:#fff;color:var(--text);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-soft);backdrop-filter:none;} .formCard h2,.formCard h3,.formCard strong {color:var(--prussian-blue);} .formCard p {color:var(--muted);}
+.kicker {color:var(--prussian-blue);text-transform:none;letter-spacing:.02em;}

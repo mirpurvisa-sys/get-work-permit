@@ -1,0 +1,52 @@
+.host {
+  position: relative;
+}
+
+.ghost {
+  visibility: hidden;
+}
+
+.live {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: var(--typing-align, flex-start);
+  justify-content: var(--typing-justify, flex-start);
+  white-space: pre-wrap;
+}
+
+.liveText::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 0.95em;
+  margin-left: 0.08em;
+  background: currentColor;
+  vertical-align: -0.12em;
+  animation: typingCursorBlink 0.9s step-end infinite;
+}
+
+.host[data-complete="true"] .liveText::after {
+  display: none;
+}
+
+@keyframes typingCursorBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liveText::after {
+    display: none;
+  }
+}
+
+
+/* Reference theme: light surfaces, navy type, restrained borders. */

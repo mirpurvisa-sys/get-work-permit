@@ -1,0 +1,121 @@
+.wrap {
+  width: var(--container);
+  margin: 0 auto;
+  padding: 84px 0;
+  color: var(--text);
+}
+
+.guidesHead,
+.postsHead {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.postsHead {
+  margin-top: 74px;
+}
+
+.kicker {
+  margin-bottom: 10px;
+  color: var(--sea-green);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.guidesHead h2,
+.postsHead h2 {
+  margin: 0 auto;
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.04;
+  max-width: 12ch;
+}
+
+.guidesGrid,
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.postsGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.guideCard,
+.post {
+  position: relative;
+  padding: 28px 22px 24px;
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+  border-top: 4px solid rgba(11, 37, 69, 0.1);
+  color: var(--text);
+}
+
+.number,
+.postDate {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  display: grid;
+  place-items: center;
+  background: var(--prussian-blue);
+  color: #ffffff;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  border-bottom: 3px solid var(--golden-pollen);
+}
+
+.guideCard h3,
+.post h3 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: 1.14rem;
+  line-height: 1.35;
+}
+
+.guideCard p,
+.post p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.guideCard a,
+.post a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  background: rgba(11, 37, 69, 0.08);
+  color: var(--prussian-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+@media (max-width: 1080px) {
+  .guidesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .postsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .guidesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Reference theme: light surfaces, navy type, restrained borders. */
+.guideCard {background:#fff;color:var(--text);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-soft);backdrop-filter:none;} .guideCard h2,.guideCard h3,.guideCard strong {color:var(--prussian-blue);} .guideCard p {color:var(--muted);}
+.kicker {color:var(--prussian-blue);text-transform:none;letter-spacing:.02em;}

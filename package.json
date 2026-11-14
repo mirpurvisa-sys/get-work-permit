@@ -1,0 +1,22 @@
+{
+    "name":  "getworkpermits-corporate",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "next dev --webpack",
+                    "build":  "next build --webpack",
+                    "start":  "next start"
+                },
+    "dependencies":  {
+                         "framer-motion":  "^12.38.0",
+                         "lucide-react":  "^1.8.0",
+                         "next":  "16.1.6",
+                         "react":  "19.2.0",
+                         "react-dom":  "19.2.0"
+                     },
+    "devDependencies":  {
+                            "@types/node":  "24.6.0",
+                            "@types/react":  "19.2.2",
+                            "@types/react-dom":  "19.2.2",
+                            "typescript":  "5.9.3"
+                        }
+}

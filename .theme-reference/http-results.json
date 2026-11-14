@@ -1,0 +1,77 @@
+[
+  {
+    "url": "/",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/about",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/services",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/countries",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/contact",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/work-permit",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/how-it-works",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/faq",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/blog",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/privacy-policy",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/terms-conditions",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/work-permit/turkey-electricians",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/work-permit/azerbaijan-construction",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/work-permit/sweden-job-seeker",
+    "status": 200,
+    "errors": false
+  },
+  {
+    "url": "/work-permit/italy-freelancer",
+    "status": 200,
+    "errors": false
+  }
+]
